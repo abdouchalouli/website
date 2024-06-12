@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(a.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #FFD700;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #FFD700;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.content-box {
+    width: 70%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #00000065;
+    box-shadow: 0 0 20px 10px #FFD700;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.p1 {
+    display: inline-block;
+    margin: 50px;
+}
+
+.p2 {
+    display: inline-block;
+    margin: 50px;
+}
+
+.photomargin {
+    margin-bottom: 40px;
+}
+
+.puzzle {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.articles-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.article {
+    border: 2px solid cyan;
+    box-shadow: 0 0 20px 10px rgba(0, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.article-image {
+    width: 250px;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.article button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.article button span {
+    background: cyan;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.article button:hover span {
+    width: 100%;
+}
+
+.article button:hover {
+    border: none;
+}
+
+.title-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title-section h2 {
+    font-size: 36px;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    button {
+        width: 160px;
+        padding: 12px 0;
+    }
+
+    .content-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .p1, .p2 {
+        margin: 30px;
+    }
+
+    .article {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-section h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    button {
+        width: 140px;
+        padding: 10px 0;
+        margin: 15px 5px;
+    }
+
+    .content-box {
+        width: 95%;
+    }
+
+    .article {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .article-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-section {
+        margin: 0 10px 20px; /* Add margin to the title section */
+    }
+
+    .title-section h2 {
+        font-size: 24px;
+    }
+
+    .articles-section {
+        margin: 20px 10px 0; /* Add margin to the articles section */
+    }
+}
